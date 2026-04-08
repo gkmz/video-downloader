@@ -1,0 +1,34 @@
+name: Question
+description: Ask a usage or development question
+title: "[Question] "
+labels:
+  - question
+  - needs-triage
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: Describe your question clearly
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to achieve?
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What You Have Tried
+      description: Mention docs/commands/issues you already checked
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I read README and relevant docs first
+          required: true
