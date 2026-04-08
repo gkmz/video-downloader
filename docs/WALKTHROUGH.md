@@ -154,9 +154,11 @@ graph TD
 
 1. 用户选择 `137`（1080p 仅视频）
 2. yt-dlp 执行命令：
+
    ```bash
    yt-dlp -f 137 --merge-output-format mp4 --ffmpeg-location /path/to/ffmpeg "url"
    ```
+
 3. yt-dlp 自动检测 `137` 无音频
 4. yt-dlp 自动选择最佳音频流（如 `251`）
 5. yt-dlp 下载两个流并调用 ffmpeg 合并
