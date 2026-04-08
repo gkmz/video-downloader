@@ -8,6 +8,7 @@
 ## [Unreleased] (未发布)
 
 ## [1.4.0] - 2026-02-04
+
 > 本次更新重点增强了订阅管理和通知机制，重点支持 Bilibili 和 Youtube 平台的订阅。
 
 ![alt text](./assets/v1.4.0-sub.png)

@@ -5,24 +5,28 @@
 ## 推荐的图标库
 
 ### 1. **Material Icons** (Google)
+
 - 网站: https://fonts.google.com/icons
 - 格式: SVG, PNG
 - 特点: 图标丰富，风格统一
 - 下载: 点击图标 → 下载 SVG
 
 ### 2. **Heroicons** (Tailwind)
+
 - 网站: https://heroicons.com/
 - 格式: SVG (Outline/Solid)
 - 特点: 简洁现代，适合 UI
 - 下载: 点击图标 → Copy SVG → 保存为 .svg 文件
 
 ### 3. **Lucide Icons**
+
 - 网站: https://lucide.dev/
 - 格式: SVG
 - 特点: 开源，图标精美
 - 下载: 点击图标 → Download SVG
 
 ### 4. **Font Awesome** (需要转换)
+
 - 网站: https://fontawesome.com/
 - 格式: 字体文件，需要转换为 SVG
 - 工具: https://fontawesome.com/icons (搜索图标 → 下载 SVG)
@@ -84,12 +88,14 @@ clearBtn := widgets.NewButtonWithTooltip("", assets.ThemedTrashIcon, func() {
 ## SVG vs PNG
 
 ### SVG 图标（推荐）
+
 - ✅ 支持主题自动变色（亮色/暗色）
 - ✅ 矢量图，任意缩放不失真
 - ✅ 文件小
 - ❌ 需要确保 SVG 格式正确
 
 ### PNG 图标
+
 - ✅ 简单直接
 - ✅ 兼容性好
 - ❌ 不支持主题变色
@@ -98,6 +104,7 @@ clearBtn := widgets.NewButtonWithTooltip("", assets.ThemedTrashIcon, func() {
 ## 图标命名建议
 
 根据功能命名图标：
+
 - `trash.svg` - 删除/清除
 - `filter.svg` - 筛选/过滤
 - `refresh.svg` - 刷新/重置
@@ -108,9 +115,11 @@ clearBtn := widgets.NewButtonWithTooltip("", assets.ThemedTrashIcon, func() {
 ## 完整示例
 
 ### 1. 下载图标
+
 从 Heroicons 下载 "trash" 图标，保存为 `assets/icons/trash.svg`
 
 ### 2. 嵌入资源
+
 ```go
 // assets/icons.go
 package assets
@@ -129,6 +138,7 @@ var ThemedTrashIcon = theme.NewThemedResource(TrashIcon)
 ```
 
 ### 3. 使用图标
+
 ```go
 // ui/views/history.go
 import "github.com/hankmor/vdd/assets"
@@ -164,4 +174,3 @@ iconify download material-symbols:filter --output assets/icons/ --format svg
 - [Material Icons](https://fonts.google.com/icons)
 - [Heroicons](https://heroicons.com/)
 - [Lucide Icons](https://lucide.dev/)
-

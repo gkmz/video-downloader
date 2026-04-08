@@ -3,12 +3,14 @@
 ## 已更新的文件
 
 ### ✅ build/build.sh
+
 - **更新内容**：
   - 添加 ffmpeg 下载逻辑（步骤 3）
   - 调用 `download-ffmpeg.sh` 自动下载
   - 支持 macOS/Linux/Windows
 
-### ✅ build/build.bat  
+### ✅ build/build.bat
+
 - **更新内容**：
   - 添加 ffmpeg 下载提示（步骤 3）
   - 提供手动下载说明
@@ -16,6 +18,7 @@
   - 更新步骤编号（4-7）
 
 ### ✅ build/build-all.sh
+
 - **无需更新**：
   - 该脚本只是循环调用 `build.sh`
   - 已自动继承 `build.sh` 的所有更新
@@ -26,6 +29,7 @@
 ## 构建流程对比
 
 ### build.sh（Unix/Linux）
+
 ```bash
 1. 清理构建
 2. 下载 yt-dlp
@@ -36,6 +40,7 @@
 ```
 
 ### build.bat（Windows）
+
 ```batch
 1. 清理构建
 2. 下载 yt-dlp
@@ -47,6 +52,7 @@
 ```
 
 ### build-all.sh（批量）
+
 ```bash
 for platform in darwin linux windows; do
     ./build/build.sh $platform  # 自动调用，包含所有更新
@@ -77,6 +83,7 @@ build\build.bat
 ```
 
 **输出**：
+
 ```
 build/output/
 ├── VDD.app                          # macOS (包含 yt-dlp + ffmpeg)
@@ -92,10 +99,12 @@ build/output/
 ## ffmpeg 下载差异
 
 ### macOS/Linux（自动）
+
 - 脚本自动调用 `download-ffmpeg.sh`
 - 失败时提示但不中断构建
 
 ### Windows（手动）
+
 - 由于 Windows 压缩包较大且结构复杂
 - 提供详细的手动下载说明
 - 提供 PowerShell 自动下载命令
@@ -107,12 +116,12 @@ build/output/
 
 所有三个脚本现在都包含：
 
-| 功能 | build.sh | build.bat | build-all.sh |
-|------|----------|-----------|--------------|
-| 下载 yt-dlp | ✅ | ✅ | ✅（通过调用）|
-| 下载 ffmpeg | ✅ | ✅ | ✅（通过调用）|
-| 检查 fyne | ✅ | ✅ | ✅（通过调用）|
-| 打包应用 | ✅ | ✅ | ✅（通过调用）|
-| 创建发布包 | ❌ | ❌ | ✅ |
+| 功能        | build.sh | build.bat | build-all.sh   |
+| ----------- | -------- | --------- | -------------- |
+| 下载 yt-dlp | ✅       | ✅        | ✅（通过调用） |
+| 下载 ffmpeg | ✅       | ✅        | ✅（通过调用） |
+| 检查 fyne   | ✅       | ✅        | ✅（通过调用） |
+| 打包应用    | ✅       | ✅        | ✅（通过调用） |
+| 创建发布包  | ❌       | ❌        | ✅             |
 
 ✅ **所有脚本已同步更新！**

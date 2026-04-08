@@ -37,6 +37,7 @@ const (
 ```
 
 产物位于 `build/dist/` 目录下，例如：
+
 - `vdd-v1.0.2-windows-amd64.zip`
 - `vdd-v1.0.2-linux-amd64.tar.xz`
 - `vdd-v1.0.2-macos.zip`
